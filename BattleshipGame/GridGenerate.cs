@@ -8,19 +8,18 @@ namespace BattleshipGame
 {
     public class GridGenerate
     {
-        public static void InitPlayersGrid(List<Player> _players, int _rows, int _cols, int[] _ships)
+        public static void InitPlayersGrid(List<Player> players, int rows, int cols, int[] ships)
         {
-
-            for (int i = 0; i < _players.Count; i++)
+            for (int i = 0; i < players.Count; i++)
             {
-                var grid = GameSet.CreateGrid(_rows, _cols);
-                foreach (int ship in _ships)
+                var grid = GameSet.CreateGrid(rows, cols);
+                foreach (int ship in ships)
                 {
-                    grid = GridPrepare.PlaceShips(grid, _rows, _cols, ship);
+                    grid = GridPrepare.PlaceShips(grid, rows, cols, ship);
                 }
-                _players[i].Grid = grid;
-                Console.WriteLine($"Player {(_players[i].Id + 1)} grid:");
-                _players[i].PrintGrid();
+                players[i].Grid = grid;
+                Console.WriteLine($"Player {(players[i].Id + 1)} grid:");
+                players[i].PrintGrid();
                 Console.WriteLine("-----");
                 Console.WriteLine();
             }

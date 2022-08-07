@@ -32,13 +32,13 @@ namespace BattleshipGame
             return players;
         }
 
-        public static string[,] CreateGrid(int _rows, int _columns)
+        public static string[,] CreateGrid(int rows, int columns)
         {
-            string[,] grid = new string[_rows, _columns];
+            string[,] grid = new string[rows, columns];
 
-            for (int i = 0; i < _columns; i++)
+            for (int i = 0; i < columns; i++)
             {
-                for (int j = 0; j < _rows; j++)
+                for (int j = 0; j < rows; j++)
                 {
                     grid[i, j] = new string("~");
                 }

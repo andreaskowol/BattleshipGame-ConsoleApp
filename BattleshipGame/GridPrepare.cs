@@ -8,7 +8,7 @@ namespace BattleshipGame
 {
     public class GridPrepare
     {
-        public static string[,] PlaceShips(string[,] _grid, int _rows, int _columns, int _slots)
+        public static string[,] PlaceShips(string[,] grid, int rows, int columns, int slots)
         {
             Random r = new();
             bool result = false;
@@ -19,20 +19,20 @@ namespace BattleshipGame
             // Check if generated numbers for potential ship place are valid? place ship on those numbers : generate new number
             while (!result)
             {
-                startRow = r.Next(_rows);
-                startCol = r.Next(_columns);
+                startRow = r.Next(rows);
+                startCol = r.Next(columns);
                 direction = r.Next(2);
 
-                if (direction == 0) { result = ValidatePlace.Horizontal(_grid, startCol, startRow, _slots); }
+                if (direction == 0) { result = ValidatePlace.Horizontal(grid, startCol, startRow, slots); }
 
-                if (direction == 1) { result = ValidatePlace.Vertical(_grid, startCol, startRow, _slots); }
+                if (direction == 1) { result = ValidatePlace.Vertical(grid, startCol, startRow, slots); }
             }
 
-            if (direction == 0) { _grid = PlaceGivenShip.Horizontal(_grid, startCol, startRow, _slots); }
+            if (direction == 0) { grid = PlaceGivenShip.Horizontal(grid, startCol, startRow, slots); }
 
-            if (direction == 1) { _grid = PlaceGivenShip.Vertical(_grid, startCol, startRow, _slots); }
+            if (direction == 1) { grid = PlaceGivenShip.Vertical(grid, startCol, startRow, slots); }
 
-            return _grid;
+            return grid;
         }
     }
 }

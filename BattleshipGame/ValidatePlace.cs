@@ -8,28 +8,28 @@ namespace BattleshipGame
 {
     public class ValidatePlace
     {
-        public static bool Horizontal(string[,] _grid, int _startCol, int _startRow, int _slots)
+        public static bool Horizontal(string[,] grid, int startCol, int startRow, int slots)
         {
             bool result;
-            int endCol = _startCol + _slots;
-            if (endCol < _grid.GetLength(1)) { result = true; } else { return false; }
+            int endCol = startCol + slots;
+            if (endCol < grid.GetLength(1)) { result = true; } else { return false; }
 
-            for (int i = _startCol; i < endCol; i++)
+            for (int i = startCol; i < endCol; i++)
             {
-                if (_grid[_startRow, i] == "~") { result = true; } else { return false; }
+                if (grid[startRow, i] == "~") { result = true; } else { return false; }
             }
             return result;
         }
 
-        public static bool Vertical(string[,] _grid, int _startCol, int _startRow, int _slots)
+        public static bool Vertical(string[,] grid, int startCol, int startRow, int slots)
         {
             bool result;
-            int endRow = _startRow + _slots;
-            if (endRow < _grid.GetLength(0) - 1) { result = true; } else { return false; }
+            int endRow = startRow + slots;
+            if (endRow < grid.GetLength(0) - 1) { result = true; } else { return false; }
 
-            for (int i = _startRow; i < endRow; i++)
+            for (int i = startRow; i < endRow; i++)
             {
-                if (_grid[i, _startCol] == "~") { result = true; } else { return false; }
+                if (grid[i, startCol] == "~") { result = true; } else { return false; }
             }
             return result;
         }

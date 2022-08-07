@@ -8,24 +8,24 @@ namespace BattleshipGame
 {
     public class PlaceGivenShip
     {
-        public static string[,] Horizontal(string[,] _grid, int _startCol, int _startRow, int _slots)
+        public static string[,] Horizontal(string[,] grid, int startCol, int startRow, int slots)
         {
-            int endCol = _startCol + _slots;
-            for (int i = _startCol; i < endCol; i++)
+            int endCol = startCol + slots;
+            for (int i = startCol; i < endCol; i++)
             {
-                _grid[_startRow, i] = _slots.ToString();
+                grid[startRow, i] = slots.ToString();
             }
-            return _grid;
+            return grid;
         }
 
-        public static string[,] Vertical(string[,] _grid, int _startCol, int _startRow, int _slots)
+        public static string[,] Vertical(string[,] grid, int startCol, int startRow, int slots)
         {
-            int endRow = _startRow + _slots;
-            for (int i = _startRow; i < endRow; i++)
+            int endRow = startRow + slots;
+            for (int i = startRow; i < endRow; i++)
             {
-                _grid[i, _startCol] = _slots.ToString();
+                grid[i, startCol] = slots.ToString();
             }
-            return _grid;
+            return grid;
         }
     }
 }
