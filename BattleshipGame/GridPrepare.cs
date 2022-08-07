@@ -23,26 +23,14 @@ namespace BattleshipGame
                 startCol = r.Next(_columns);
                 direction = r.Next(2);
 
-                if (direction == 0)
-                {
-                    result = ValidatePlace.Horizontal(_grid, startCol, startRow, _slots);
-                }
+                if (direction == 0) { result = ValidatePlace.Horizontal(_grid, startCol, startRow, _slots); }
 
-                if (direction == 1)
-                {
-                    result = ValidatePlace.Vertical(_grid, startCol, startRow, _slots);
-                }
+                if (direction == 1) { result = ValidatePlace.Vertical(_grid, startCol, startRow, _slots); }
             }
 
-            if (direction == 0)
-            {
-                _grid = PlaceGivenShip.Horizontal(_grid, startCol, startRow, _slots);
-            }
+            if (direction == 0) { _grid = PlaceGivenShip.Horizontal(_grid, startCol, startRow, _slots); }
 
-            if (direction == 1)
-            {
-                _grid = PlaceGivenShip.Vertical(_grid, startCol, startRow, _slots);
-            }
+            if (direction == 1) { _grid = PlaceGivenShip.Vertical(_grid, startCol, startRow, _slots); }
 
             return _grid;
         }

@@ -15,7 +15,6 @@ namespace BattleshipGame
             {
                 _grid[_startRow, i] = _slots.ToString();
             }
-
             return _grid;
         }
 
@@ -26,7 +25,6 @@ namespace BattleshipGame
             {
                 _grid[i, _startCol] = _slots.ToString();
             }
-
             return _grid;
         }
     }

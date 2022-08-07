@@ -43,7 +43,6 @@ namespace BattleshipGame
                         break;
                 }
             }
-
             return _players;
         }
     }

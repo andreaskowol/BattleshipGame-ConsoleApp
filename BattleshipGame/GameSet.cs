@@ -29,7 +29,6 @@ namespace BattleshipGame
             {
                 players.Add(new Player(i));
             }
-
             return players;
         }
 

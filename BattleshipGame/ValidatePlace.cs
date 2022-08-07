@@ -18,7 +18,6 @@ namespace BattleshipGame
             {
                 if (_grid[_startRow, i] == "~") { result = true; } else { return false; }
             }
-
             return result;
         }
 
@@ -32,7 +31,6 @@ namespace BattleshipGame
             {
                 if (_grid[i, _startCol] == "~") { result = true; } else { return false; }
             }
-
             return result;
         }
     }

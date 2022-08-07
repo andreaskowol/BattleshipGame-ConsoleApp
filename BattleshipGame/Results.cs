@@ -14,11 +14,11 @@ namespace BattleshipGame
             Console.WriteLine("!WINNER! is: " + (playerList[0].Hits > playerList[1].Hits ? "Player 1" : "Player 2"));
             Console.WriteLine();
 
-            Console.WriteLine($"Player 1 with {playerList[0].Hits} hits. Grid:");
+            Console.WriteLine($"Player {playerList[0].Id +1} with {playerList[0].Hits} hits. Grid:");
             playerList[0].PrintGrid();
             Console.WriteLine();
 
-            Console.WriteLine($"Player 2 with {playerList[1].Hits} hits. Grid:");
+            Console.WriteLine($"Player {playerList[1].Id +1} with {playerList[1].Hits} hits. Grid:");
             playerList[1].PrintGrid();
         }
     }
